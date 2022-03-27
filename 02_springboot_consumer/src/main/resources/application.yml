@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: springboot_rabbitmq_consumer
+  rabbitmq:
+    host: 139.9.141.175
+    virtual-host: /
+    username: admin
+    password: 123
+    port: 5672
+    listener:
+      type: simple
+      simple:
+        max-concurrency: 10
+        concurrency: 5
+        prefetch: 10
+        acknowledge-mode: manual
